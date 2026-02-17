@@ -1,0 +1,50 @@
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="contenedor">
+  <div class="menu">
+    <img class="img-2" src="icons/logo_barra.png" id="logo">
+    <h3 class="title">¡Bienvenido!</h3>
+    <p class="p3">Por favor ingresa a tu cuenta
+    </p>
+
+    <div class="inputs-1">
+      <label>Usuario</label>
+      <input class="correo" 
+      type="email" 
+      formControlName="email"
+      placeholder="Correo"
+      required  />
+
+      <label>Constraseña</label>
+      <input class="password" 
+      type="password"  
+      formControlName="password" 
+      placeholder="Contraseña" />
+    </div>
+
+    <div class="inputs-2">
+      <input type="checkbox" />
+      <p>Seguir conectado</p>
+       
+    </div>
+    
+
+   
+    
+    <div class="contenedor-btn">
+      <a style="margin-top: 4vh;
+       width: 100%; font-size: 1rem;
+       margin-right: 10vh;
+       ">¿Olvidaste la contraseña?</a>
+    <button class="btn" type="submit">Log In</button>
+    <button class="btn" (click)="crearUsuario()">Crear usuario</button>
+    <a>¿Nuevo por aquí? Crea tu contraseña aquí.</a>
+    
+    </div>
+  </div>
+
+
+  <img class="img-1" src="icons/foto_login.png" alt="...">
+</form>
+
+
+

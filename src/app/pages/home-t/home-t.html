@@ -1,0 +1,184 @@
+
+    <header>
+        <div class="logo-user">
+         <div class="img-logo">
+             <img src="icons/logo_isil.png" alt=""> 
+
+         </div>
+         <div class="user">
+          <i class="fa-regular fa-bell"></i>
+          <i class="fa-regular fa-envelope"></i>
+        <li class="nav-item dropdown" [class.open]="isUser">
+        <h2 class="nav-link dropdown-toggle" href="#" (mouseenter)="toogleUser($event)">
+        {{email | uppercase}}
+        </h2>
+       <ul class="dropdown-menu" [class.open]="!isUser" >
+       <li><a class="dropdown-item" href="#" [routerLink]="['/perfil']">Perfil</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/calificaciones']" >Calificaciones</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/calendario']">Calendario</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/preferencias']">Preferencias</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/cerrar']">Cerrar Sesión</a></li>
+       </ul>
+  
+       </li>
+          <h3 class="eh">{{email?.charAt(0) | uppercase}}</h3>
+         </div>
+         
+        </div>
+
+<div class="menu">
+    <nav class="menu-enlace">
+
+  <ul class="nav nav-pills">
+  <li class="nav-item">
+    <i class="fa-solid fa-house fa-xs"  [routerLink]="['/home']"></i>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="#" [routerLink]="['/my']">Área personal</a>
+  </li>
+  <li class="nav-item yellow" >
+    <a class="nav-link " aria-current="page" href="#" [routerLink]="['/cursos-teacher']">Mis cursos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="#"[routerLink]="['/isilnet']" target="_blank">ISILNET</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="https://drive.google.com/drive/folders/1mHkgvHSrhNIqMSLylUA7NtUbzA5-Y_fB" target="_blank"   rel="noopener noreferrer">GUÍAS</a>
+  </li>
+  <li class="nav-item dropdown blue" [class.open]="isOpen">
+  <a class="nav-link dropdown-toggle" href="#" (mouseenter)="toggleDropdown($event)">
+    Servicios ISIL
+  </a>
+    <ul class="dropdown-menu" [class.open]="!isOpen" >
+    <li><a class="dropdown-item" href="#" [routerLink]="['/psicologia']">Asesoría Psicológica</a></li>
+    <li><a class="dropdown-item" href="#">Blibiotecas</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/bolsa-laboral']">Bolsa laboral</a></li>
+    <li><a class="dropdown-item" href="https://www.facebook.com/groups/553840748382298" target="_blank">Comunidad ISIL</a></li>
+    <li><a class="dropdown-item" href="#">Consejería académica y Éxito Estudiantil</a></li>
+    <li><a class="dropdown-item" href="#">Empleabilidad</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/home']">Invetigación aplicada</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/isilnet']">Isilnet</a></li>
+    <li><a class="dropdown-item" href="#">Plataformas físicas</a></li>
+    <li><a class="dropdown-item" href="https://open.spotify.com/show/5H6TUiDoRblC8Y3eLwgkLZ" target="_blank">RadioIsil</a></li>
+    <li><a class="dropdown-item" href="#">Respuestas ISIL</a></li>
+    <li><a class="dropdown-item" href="#">Vida ISIL</a></li>
+  </ul>
+  
+  
+</li>
+  <li class="nav-item dropdown" [class.open]="isOpenToo">
+  <a class="nav-link dropdown-toggle" href="#" (mouseenter)="toggleDropdownToo($event)">
+    Soporte ISIL+
+  </a>
+    <ul class="dropdown-menu" [class.open]="!isOpenToo" >
+    <li><a class="dropdown-item" href="#">Escríbenos</a></li>
+    <li><a class="dropdown-item" href="https://api.whatsapp.com/send?phone=51987226837" target="_blank">Whatsapp ISIL+</a></li>
+  </ul>
+  
+</li>
+</ul>
+      
+    </nav>
+    
+</div>
+</header>
+<main>
+    <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="icons/programa.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="icons/banner.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="icons/carrusel.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="icons/carrusel2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="icons/oportunidades.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="contenido">
+  <div class="banners">
+    <video #banner
+  muted
+   autoplay
+   loop
+    playsinline
+     >
+  <source src="icons/banner.mp4" type="video/mp4" />
+  </video> 
+
+  <div class="banner">
+    <img src="icons/img1.png">
+  </div>
+
+  <div class="banner">
+    <img src="icons/img2.png">
+  </div>
+
+  <div class="banner">
+    <img src="icons/img3.png">
+  </div>
+
+  <div class="banner">
+    <img src="icons/img4.png">
+  </div>
+
+  <div class="bannerIMG imgs">
+    <img src="icons/img5.png">
+    <img src="icons/img6.jpg">
+    <img src="icons/img7.jpg">
+    <img src="icons/img8.jpg">
+  </div>
+
+  </div>
+  <div class="cursos">
+    <h2>Aulas</h2>
+ 
+
+    @for(dato of datos_curso_obtenidos(); track $index){
+
+      <div class="curso">
+      <div class="img-curso">
+        <img [src]="'icons/' + dato.imagen_curso" alt="">
+      </div>
+
+      <div class="info-curso">
+        <h5>{{dato.nombre}}</h5>
+        <p class="descripcion">{{dato.descripcion}}</p>
+        <p>Profesor:</p> 
+        <a href="#">{{nombre | uppercase}} {{apellido | uppercase}}</a>
+      </div>
+    </div>
+    }
+  </div>
+
+  
+</div>
+
+</main>
+<footer>
+  <div></div>
+</footer>

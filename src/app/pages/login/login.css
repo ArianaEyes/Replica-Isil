@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+.img-1 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+p{
+    width: 100%;
+}
+
+.menu{
+    background-color: white;
+    height: 710.891px;
+    width: 600px;
+    padding: 48px;
+    background-color: white;
+    display: block;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    position: relative;
+    z-index: 3;
+    margin-left: 119vh;
+    margin-top: 14vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.201);
+} 
+.img-2{
+    display: flex;
+  width: 10vh;
+  margin: auto;
+
+}
+.title{
+    text-align: center;
+    font-size: 2.2rem;
+}
+.p3{
+    margin-left:vh;
+    text-align: center;
+    font-size: 1.13rem;
+    font-weight: 800;
+}
+.numtel{
+    font-size: 1.1rem;
+}
+
+.inputs-1{
+    display: grid;
+    margin-bottom: 1vh;
+}
+.inputs-1 input{
+    border: 1px solid rgba(0, 0, 0, 0.163);
+    width:100%;
+    border-radius: 4px;
+    outline: none;
+    padding: 1vh 1vh;
+}
+.inputs-1 label{
+    margin-top: 1vh;
+}
+
+.inputs-2{
+    display: flex;
+    align-items: center;
+    margin-bottom: -.5vh;
+    font-size: .8rem;
+}
+
+.inputs-2 p{
+    margin-left: 1vh;
+}
+.contenedor-btn{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn{
+    color: aliceblue;
+    margin: 2vh auto;
+    height: 25%;
+    width: 90%;
+    font-weight: 800;
+    font-size: 1.3rem;
+    border: none;
+    padding: 1vh 2vh;
+    border-radius: 10px;
+    background-color: #00AEEF;
+}
+a{
+    font-weight: 600;
+}

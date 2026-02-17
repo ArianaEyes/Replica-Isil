@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+
+.container-1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-container{
+   position: relative; 
+    margin: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+p{
+    width: 100%;
+}
+
+.new-user{
+    position:absolute;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    width: 25%;
+    height: 60vh;
+    top: 20vh;
+    padding: 4vh 2.3vh;
+    z-index: 2;
+    border-radius: 20px;
+} 
+
+.title{
+    text-align: center;
+    font-size: 2.2rem;
+}
+.p3{
+    margin-left:vh;
+    text-align: center;
+    font-size: 1.13rem;
+    font-weight: 800;
+}
+.numtel{
+    font-size: 1.1rem;
+}
+
+.inputs-1{
+    display: grid;
+    margin-bottom: 1vh;
+}
+.inputs-1 input{
+    border: 1px solid black;
+    width:100%;
+    border-radius: 30px;
+    outline: none;
+    padding: .8vh;
+    padding-left: 2vh;
+}
+.inputs-1 label{
+    margin-top: 1vh;
+}
+
+.inputs-2{
+    display: flex;
+    align-items: center;
+    margin-bottom: -.5vh;
+    font-size: .8rem;
+}
+
+.inputs-2 p{
+    margin-left: 1vh;
+}
+.contenedor-btn{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn{
+    color: aliceblue;
+    margin: 2vh auto;
+    height: 30%;
+    width: 40%;
+    font-weight: 800;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(161, 26, 26);
+}
+.new-user a:nth-of-type(1){
+    text-align: center;
+    color: rgb(189, 13, 13);
+    padding-left: 1vh;
+    margin: 0vh 0vh 6vh 1vh;
+}
+.new-user a:nth-of-type(2){
+    text-align: center;
+    color: rgb(189, 13, 13);
+    padding-left: 1vh;
+    margin: 0vh 0vh 6vh 4.5vh;
+}

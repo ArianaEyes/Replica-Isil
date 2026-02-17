@@ -1,0 +1,180 @@
+
+    <header>
+        <div class="logo-user">
+         <div class="img-logo">
+             <img src="icons/logo_isil.png" alt=""> 
+
+         </div>
+         <div class="user">
+          <i class="fa-regular fa-bell"></i>
+          <i class="fa-regular fa-envelope"></i>
+        <li class="nav-item dropdown" [class.open]="isUser">
+        <h2 class="nav-link dropdown-toggle" href="#" (mouseenter)="toogleUser($event)">
+        {{email | uppercase}}
+        </h2>
+       <ul class="dropdown-menu" [class.open]="!isUser" >
+       <li><a class="dropdown-item" href="#" [routerLink]="['/perfil']">Perfil</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/calificaciones']">Calificaciones</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/calendario']">Calendario</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/preferencias']">Preferencias</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/cerrar']">Cerrar Sesión</a></li>
+       </ul>
+  
+       </li>
+          <h3 class="eh">{{email?.charAt(0) | uppercase}}</h3>
+         </div>
+         
+        </div>
+
+<div class="menu">
+    <nav class="menu-enlace">
+
+  <ul class="nav nav-pills">
+  <li class="nav-item">
+    <i class="fa-solid fa-house fa-xs"  [routerLink]="['/home']"></i>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="#" [routerLink]="['/my']">Área personal</a>
+  </li>
+  <li class="nav-item blue" >
+    <a class="nav-link " aria-current="page" href="#" [routerLink]="['/cursos-teacher']">Mis cursos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="#"[routerLink]="['/isilnet']" target="_blank">ISILNET</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="https://drive.google.com/drive/folders/1mHkgvHSrhNIqMSLylUA7NtUbzA5-Y_fB" target="_blank"   rel="noopener noreferrer">GUÍAS</a>
+  </li>
+  <li class="nav-item dropdown " [class.open]="isOpen">
+  <a class="nav-link dropdown-toggle" href="#" (mouseenter)="toggleDropdown($event)">
+    Servicios ISIL
+  </a>
+    <ul class="dropdown-menu" [class.open]="!isOpen" >
+    <li><a class="dropdown-item" href="#" [routerLink]="['/psicologia']">Asesoría Psicológica</a></li>
+    <li><a class="dropdown-item" href="#">Blibiotecas</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/bolsa-laboral']">Bolsa laboral</a></li>
+    <li><a class="dropdown-item" href="https://www.facebook.com/groups/553840748382298" target="_blank">Comunidad ISIL</a></li>
+    <li><a class="dropdown-item" href="#">Consejería académica y Éxito Estudiantil</a></li>
+    <li><a class="dropdown-item" href="#">Empleabilidad</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/home']">Invetigación aplicada</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/isilnet']">Isilnet</a></li>
+    <li><a class="dropdown-item" href="#">Plataformas físicas</a></li>
+    <li><a class="dropdown-item" href="https://open.spotify.com/show/5H6TUiDoRblC8Y3eLwgkLZ" target="_blank">RadioIsil</a></li>
+    <li><a class="dropdown-item" href="#">Respuestas ISIL</a></li>
+    <li><a class="dropdown-item" href="#">Vida ISIL</a></li>
+  </ul>
+  
+  
+</li>
+  <li class="nav-item dropdown" [class.open]="isOpenToo">
+  <a class="nav-link dropdown-toggle" href="#" (mouseenter)="toggleDropdownToo($event)">
+    Soporte ISIL+
+  </a>
+    <ul class="dropdown-menu" [class.open]="!isOpenToo" >
+    <li><a class="dropdown-item" href="#">Escríbenos</a></li>
+    <li><a class="dropdown-item" href="https://api.whatsapp.com/send?phone=51987226837" target="_blank">Whatsapp ISIL+</a></li>
+  </ul>
+  
+</li>
+</ul>
+      
+    </nav>
+    
+</div>
+</header>
+
+<main>
+    <div class="cursos-area">
+        <h2>Mis cursos</h2>
+        <div class="espacio">
+            <div class="title">
+                Vista general de curso
+            <div class="blue espacio-border"></div>
+            </div>
+
+            <div class="espacio-menu">
+                <button [class.open]="cursos"
+                class="nav-item dropdown">
+        <h2 class="nav-link dropdown-toggle" href="#" (click)="toogleCursos()">
+        Todos 
+        </h2>
+       <ul class="dropdown-menu" [class.open]="!isUser" >
+       <li><a class="dropdown-item" href="#"> ✓ Todos</a></li>
+       <li><a class="dropdown-item" href="#">En progreso</a></li>
+       <li><a class="dropdown-item" href="#">Futuros</a></li>
+       <li><a class="dropdown-item" href="#">Pasados</a></li>
+       <li><a class="dropdown-item" href="#">Destacados</a></li>
+       <li><a class="dropdown-item" href="#">Eliminado de la vista</a></li>
+       </ul>
+  
+       </button>
+
+       <input type="text" data-region="input" data-action="search" class="form-control withclear " placeholder="Buscar" name="search" value="" autocomplete="off">
+       <button class="btn btn-clear d-none" data-action="clearsearch" type="button">
+         <i class="fa-solid fa-magnifying-glass"></i>
+         <span class="sr-only">Limpiar datos de búsqueda</span>
+        </button>
+
+        <button [class.open]="ordenar"
+        class="nav-item dropdown ">
+        <h2 class="nav-link dropdown-toggle" href="#" (click)="OrdenarToogle()">
+        Ordenar por nombre del curso 
+        </h2>
+       <ul class="dropdown-menu" [class.open]="!ordenar" >
+       <li><a class="dropdown-item" href="#"> ✓ Ordenar por nombre del curso</a></li>
+       <li><a class="dropdown-item" href="#">Ordenar por último acceso</a></li>
+       </ul>
+       </button>
+
+       <button [class.open]="tarjeta"
+        class="nav-item dropdown ">
+        <h2 class="nav-link dropdown-toggle" href="#" (click)="TarjetaToogle()">
+        Tarjeta
+        </h2>
+       <ul class="dropdown-menu" [class.open]="!tarjeta" >
+       <li><a class="dropdown-item" href="#"> ✓ Tarjeta</a></li>
+       <li><a class="dropdown-item" href="#">Lista</a></li>
+       <li><a class="dropdown-item" href="#">Resumen</a></li>
+       </ul>
+       </button>
+
+            </div>
+
+          <div class="cards-cursos">
+            @for(dato of datos_curso_obtenidos(); track $index){
+              <div class="card">
+                <img [src]="'icons/' + dato.imagen_curso" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{dato.nombre}}</h5>
+                 
+                </div>
+                
+                 <div class="card-down">
+                    <p>2025-20</p>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+              </div>
+            }
+
+          </div>
+            
+          <div class="descripcion-cursos">
+          <p>Mostrar</p>
+          <button [class.open]="descripcion"
+        class="nav-item dropdown ">
+        <h2 class="nav-link dropdown-toggle" href="#" (click)="DescripcionToogle()">
+        Todos
+        </h2>
+       <ul class="dropdown-menu" [class.open]="!descripcion" >
+       <li><a class="dropdown-item" href="#"> ✓ Todos</a></li>
+       <li><a class="dropdown-item" href="#">12</a></li>
+       </ul>
+       </button>
+        </div>
+        </div>
+        
+    </div>
+</main>
+<footer>
+  <div></div>
+</footer>

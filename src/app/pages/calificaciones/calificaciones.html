@@ -1,0 +1,121 @@
+
+    <header>
+        <div class="logo-user">
+         <div class="img-logo">
+             <img src="icons/logo_isil.png" alt=""> 
+
+         </div>
+         <div class="user">
+          <i class="fa-regular fa-bell"></i>
+          <i class="fa-regular fa-envelope"></i>
+        <li class="nav-item dropdown" [class.open]="isUser">
+        <h2 class="nav-link dropdown-toggle" href="#" (mouseenter)="toogleUser($event)">
+        {{email | uppercase}}
+        </h2>
+       <ul class="dropdown-menu" [class.open]="!isUser" >
+       <li><a class="dropdown-item" href="#" [routerLink]="['/perfil']">Perfil</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/calificaciones']">Calificaciones</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/calendario']">Calendario</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/preferencias']">Preferencias</a></li>
+       <li><a class="dropdown-item" href="#" [routerLink]="['/cerrar']">Cerrar Sesión</a></li>
+       </ul>
+  
+       </li>
+          <h3 class="eh">{{email?.charAt(0) | uppercase}}</h3>
+         </div>
+         
+        </div>
+
+<div class="menu">
+    <nav class="menu-enlace">
+
+  <ul class="nav nav-pills">
+  <li class="nav-item blue" >
+    <i class="fa-solid fa-house fa-xs"  [routerLink]="['/home']"></i>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="#" [routerLink]="['/my']">Área personal</a>
+  </li>
+  <li class="nav-item" >
+    <a class="nav-link " aria-current="page" href="#" [routerLink]="['/cursos']">Mis cursos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="#"[routerLink]="['/isilnet']" target="_blank">ISILNET</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="https://drive.google.com/drive/folders/1mHkgvHSrhNIqMSLylUA7NtUbzA5-Y_fB" target="_blank"   rel="noopener noreferrer">GUÍAS</a>
+  </li>
+  <li class="nav-item dropdown " [class.open]="isOpen">
+  <a class="nav-link dropdown-toggle" href="#" (mouseenter)="toggleDropdown($event)">
+    Servicios ISIL
+  </a>
+    <ul class="dropdown-menu" [class.open]="!isOpen" >
+    <li><a class="dropdown-item" href="#" [routerLink]="['/psicologia']">Asesoría Psicológica</a></li>
+    <li><a class="dropdown-item" href="#">Blibiotecas</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/bolsa-laboral']">Bolsa laboral</a></li>
+    <li><a class="dropdown-item" href="https://www.facebook.com/groups/553840748382298" target="_blank">Comunidad ISIL</a></li>
+    <li><a class="dropdown-item" href="#">Consejería académica y Éxito Estudiantil</a></li>
+    <li><a class="dropdown-item" href="#">Empleabilidad</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/home']">Invetigación aplicada</a></li>
+    <li><a class="dropdown-item" href="#" [routerLink]="['/isilnet']">Isilnet</a></li>
+    <li><a class="dropdown-item" href="#">Plataformas físicas</a></li>
+    <li><a class="dropdown-item" href="https://open.spotify.com/show/5H6TUiDoRblC8Y3eLwgkLZ" target="_blank">RadioIsil</a></li>
+    <li><a class="dropdown-item" href="#">Respuestas ISIL</a></li>
+    <li><a class="dropdown-item" href="#">Vida ISIL</a></li>
+  </ul>
+  
+  
+</li>
+  <li class="nav-item dropdown" [class.open]="isOpenToo">
+  <a class="nav-link dropdown-toggle" href="#" (mouseenter)="toggleDropdownToo($event)">
+    Soporte ISIL+
+  </a>
+    <ul class="dropdown-menu" [class.open]="!isOpenToo" >
+    <li><a class="dropdown-item" href="#">Escríbenos</a></li>
+    <li><a class="dropdown-item" href="https://api.whatsapp.com/send?phone=51987226837" target="_blank">Whatsapp ISIL+</a></li>
+  </ul>
+  
+</li>
+</ul>
+      
+    </nav>
+    
+</div>
+</header>
+<main>
+<div class="contenedor">
+        <div class="superior">
+            <div class="superior-paso1">
+            <h3 class="eh">{{email?.charAt(0) | uppercase}}</h3>
+            <h3 style="color: #555555; font-weight: 400; margin-left: 2vh;">{{email |uppercase}}</h3>
+            </div>
+            <button class="superior-paso2">Restablecer página a por defecto</button>
+        </div>
+        <div class="inferior">
+            <div class="inferior-paso1">
+                <h3 style="font-weight: 400; color: #5a5a5a;">Cursos que estoy tomando</h3>
+
+                <div>
+                    
+                    <ul>
+                        <li class="titulo"><b style="color: #6d6d6d;">Nombre del curso</b><b style="color: #6d6d6d;">Calificación</b></li>
+                        <li><p>5218.202520 - CALCULO PARA CIENCIAS E INGENIERIA (SRM)</p>-</li>
+                        <li><p>4761.202520 - DESARROLLO DE APLICACIONES MOVILES (SRM)</p>-</li>
+                        <li><p>3072.202520 - PROGRAMACION AVANZADA DE BASE DE DATOS (SRM)</p>-</li>
+                        <li><p>1451.202520 - COMUNICACION ESCRITA (SRM)</p>-</li>
+                        <li><p>1066.202520 - PROGRAMACION WEB I (SRM)</p>-</li>
+                        <li><p>3559.202520 - ANALISIS Y DISEÑO DE SISTEMAS I (SRM)</p>-</li>
+                        <li><p>2256.202520 - GESTION DE DISPOSITIVOS TECNOLOGICOS (SRM)</p>-</li>
+                        <li><p>3586.202520 - SOLUCIONES BASADAS EN INTERNET DE LAS COSAS (SRM)</p>-</li>
+                    </ul>
+                </div>
+
+
+            
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+  <div></div>
+</footer>

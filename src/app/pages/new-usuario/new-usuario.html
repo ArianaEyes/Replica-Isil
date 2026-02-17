@@ -1,0 +1,35 @@
+
+<form [formGroup] = "formulario" (ngSubmit)="onSubmit()" class="container-1">
+  <div class="new-user">
+    <!-- <img src="icons/img-icono.png" /> -->
+    <h3 class="title">Create a new user</h3>
+    <div class="inputs-1">
+      <label>Email Address</label>
+      <input class="correo" 
+      type="email" 
+      formControlName="email"
+      placeholder="Correo"
+      required  />
+
+      <label>Password</label>
+      <input class="password" 
+      type="password"  
+      formControlName="password" 
+      placeholder="Contraseña" />
+
+      <label>Cargo</label>
+      <input class="correo" 
+      type="text" 
+      formControlName="cargo"
+      placeholder="Cargo"
+      required  />
+    </div>
+
+    <div class="contenedor-btn">
+    <button class="btn" type="submit">Guardar</button>
+    </div>
+  </div>
+
+
+  <img src="icons/img-pago-3.jpg" class="img-container" />
+</form>

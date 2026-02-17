@@ -1,0 +1,239 @@
+.content-head-menu{
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    background-color: #F1F1F1;
+
+}
+.content-head{
+    position: fixed;
+    width: 100%;
+    height: 9.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #009FDF;
+    z-index: 1050;
+}
+
+.logo-user{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.img-logo{
+    display: flex;
+    margin-left: 4vh;
+    padding: 20px 0;
+    width: 14vw;
+}
+
+.rounded-full{
+    display: block;
+    margin-left: 5.5vh;
+    padding: 20px 0;
+    width: 49.5px;
+    border-radius: 50%;
+}
+.user{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 4vh;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+.user p{
+    margin-top: 1.5vh;
+}
+.user .fa-bell{
+    font-size: 1.3rem;
+    margin: auto 0;
+    color: white;
+    padding: 6.5px 7px;
+    border-radius: 100%;
+}
+
+.img-logo img{
+    width: 30%;
+    height: auto;
+}
+
+.content-menu{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    margin-top: 9.5vh;
+}
+.menu{
+    width: 21.1%;
+    height: 90.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+}
+.estudiante{
+    width:87%;
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    flex-wrap: wrap;
+    margin-left: 2vh;
+}
+label{
+    margin-right: 2vh;
+}
+.form-select{
+    display: flex;
+    padding: .9vh 1.5vh;
+    width: 46%;
+    color: #009FDF;
+    font-weight: 500;
+    margin-bottom: 1vh;
+}
+.menu-elegir{
+    width: 90%;
+    height: 30vh;
+    margin-bottom: 45vh;
+    margin-left: 1vh;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.nav-item{
+    padding: .4vh;
+}
+.nav-link{
+    color: #75858A;
+    font-weight: 500;
+}
+.caja{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+.contenido{
+    width: 49%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:73vh;
+    margin-top: 2vh;
+}
+
+.banners img{
+    border-radius: 10px;
+}
+.parrafo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 73vh;
+    margin-top: 14vh;
+    height: 3vh;
+    width: 49%;
+    font-size: .9rem;
+    color: #75858A;
+}
+
+.botones{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.botones a{
+    display: flex;
+    flex-wrap: wrap;
+    width: 11vw;
+    height: 100%;
+    border-radius: 12px;
+    text-decoration: none;
+}
+.thumbnail{
+    display: flex;
+    height: 100%;
+    width: 30%;
+
+}
+.thumbnail img{
+    width: 100%;
+    height: auto;
+    border-radius: 12px 0 0 12px;
+}
+.title-access{
+    width: 40%;
+    margin: auto;
+    color: white;
+}
+.icon{
+    height: 3vh;
+    margin:auto;
+}
+.informacion{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.div{
+    width: 45%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.div div{
+    background-color: #FBC700;
+    height: 6.5vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    padding: 1vh 3vh;
+    color: black;
+    border-radius: 9px;
+
+}
+.informacion .nav-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.fa-chevron-down{
+    font-size: 12px;
+    margin-top: 1vh;
+    margin-right: 2vh;
+    color: white;
+}
+
+.notas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 7vh;
+
+}
+.titulo{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #75858A;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1vh 2vh;
+    border-radius: 9px;
+}

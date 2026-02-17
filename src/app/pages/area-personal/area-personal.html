@@ -1,0 +1,292 @@
+<header>
+  <div class="logo-user">
+    <div class="img-logo">
+      <img src="icons/logo_isil.png" alt="">
+
+    </div>
+    <div class="user">
+      <i class="fa-regular fa-bell"></i>
+      <i class="fa-regular fa-envelope"></i>
+      <li class="nav-item dropdown" [class.open]="isUser">
+        <h2 class="nav-link dropdown-toggle" href="#" (mouseenter)="toogleUser($event)">
+          {{email | uppercase}}
+        </h2>
+        <ul class="dropdown-menu" [class.open]="!isUser">
+          <li><a class="dropdown-item" href="#" [routerLink]="['/perfil']">Perfil</a></li>
+          <li><a class="dropdown-item" href="#" [routerLink]="['/calificaciones']" >Calificaciones</a></li>
+          <li><a class="dropdown-item" href="#" [routerLink]="['/calendario']">Calendario</a></li>
+          <li><a class="dropdown-item" href="#" [routerLink]="['/preferencias']">Preferencias</a></li>
+          <li><a class="dropdown-item" href="#" [routerLink]="['/cerrar']">Cerrar Sesión</a></li>
+        </ul>
+
+      </li>
+      <h3 class="eh">{{email?.charAt(0) | uppercase}}</h3>
+    </div>
+
+  </div>
+
+  <div class="menu">
+    <nav class="menu-enlace">
+
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <i class="fa-solid fa-house fa-xs" [routerLink]="['/home']"></i>
+        </li>
+        <li class="nav-item blue">
+          <a class="nav-link " aria-current="page" href="#" [routerLink]="['/my']">Área personal</a>
+        </li>
+        <li class="nav-item yellow">
+          <a class="nav-link " aria-current="page" href="#" [routerLink]="['/cursos']">Mis cursos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="/isilnet" target="_blank">ISILNET</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="https://drive.google.com/drive/folders/1mHkgvHSrhNIqMSLylUA7NtUbzA5-Y_fB" target="_blank"   rel="noopener noreferrer">GUÍAS</a>
+        </li>
+        <li class="nav-item dropdown" [class.open]="isOpen">
+          <a class="nav-link dropdown-toggle" href="#" (mouseenter)="toggleDropdown($event)">
+            Servicios ISIL
+          </a>
+          <ul class="dropdown-menu" [class.open]="!isOpen">
+            <li><a class="dropdown-item" href="#" [routerLink]="['/psicologia']">Asesoría Psicológica</a></li>
+            <li><a class="dropdown-item" href="#">Blibiotecas</a></li>
+            <li><a class="dropdown-item" href="#" [routerLink]="['/bolsa-laboral']">Bolsa laboral</a></li>
+            <li><a class="dropdown-item" href="https://www.facebook.com/groups/553840748382298" target="_blank">Comunidad ISIL</a></li>
+            <li><a class="dropdown-item" href="#">Consejería académica y Éxito Estudiantil</a></li>
+            <li><a class="dropdown-item" href="#">Empleabilidad</a></li>
+            <li><a class="dropdown-item" href="#" [routerLink]="['/home']">Invetigación aplicada</a></li>
+            <li><a class="dropdown-item" href="#" [routerLink]="['/isilnet']">Isilnet</a></li>
+            <li><a class="dropdown-item" href="#">Plataformas físicas</a></li>
+            <li><a class="dropdown-item" href="https://open.spotify.com/show/5H6TUiDoRblC8Y3eLwgkLZ" target="_blank">RadioIsil</a></li>
+            <li><a class="dropdown-item" href="#">Respuestas ISIL</a></li>
+            <li><a class="dropdown-item" href="#">Vida ISIL</a></li>
+          </ul>
+
+
+        </li>
+        <li class="nav-item dropdown" [class.open]="isOpenToo">
+          <a class="nav-link dropdown-toggle" href="#" (mouseenter)="toggleDropdownToo($event)">
+            Soporte ISIL+
+          </a>
+          <ul class="dropdown-menu" [class.open]="!isOpenToo">
+            <li><a class="dropdown-item" href="#">Escríbenos</a></li>
+            <li><a class="dropdown-item" href="https://api.whatsapp.com/send?phone=51987226837" target="_blank">Whatsapp ISIL+</a></li>
+          </ul>
+
+        </li>
+      </ul>
+
+    </nav>
+
+  </div>
+</header>
+<main>
+  <div class="personal-area">
+    <h2>Área personal</h2>
+    <div class="espacio">
+
+      <div class="timeline">
+        <div class="title">Línea de tiempo</div>
+
+        <div class="timer">
+          <div class="timer-container">
+            <i class="fa-regular fa-alarm-clock"></i>
+            <i class="fa-solid fa-chevron-down "></i>
+            
+          </div>
+
+          <div class="timer-container">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-chevron-down "></i>
+          </div>
+          
+        </div>
+
+        <div class="PA">
+          @for(tarea of tareaJ; track $index){
+          <div class="tarea1">
+            <div class="fecha">
+              <b>{{tarea.fecha}}</b>
+            </div>
+            <div class="info-tarea">
+              <div class="proceso">
+                <p class="hora">{{tarea.hora}}</p>
+                <i class="fa-solid fa-file-arrow-up"></i>
+                
+              </div>
+              <div class="aprendizaje">
+                <h5>PROCESO DE APRENDIZAJE 1</h5>
+                <p class="info-curso">Vencimiento de Tarea - {{tarea.curso}}</p>
+              </div>
+              @if(tarea.tarea){
+                <button class="agregar">AGREGAR ENTREGA</button>
+              }
+              
+            </div>
+          </div>
+          }
+
+          <div class="tarea2">
+            <div class="fecha"><b>viernes, 19 de septiembre de 2025</b></div>
+            @for(tarea of tareaV; track $index){
+
+            <div class="info-tarea">
+              <div class="proceso">
+                <p class="hora">{{tarea.hora}}</p>
+                <i class="fa-solid fa-file-arrow-up"></i>
+              </div>
+              <div class="aprendizaje">
+                <h5>PROCESO DE APRENDIZAJE 1</h5>
+                <p class="info-curso">Vencimiento de Tarea - {{tarea.curso}}</p>
+              </div>
+              @if(tarea.tarea){
+                <button class="agregar">AGREGAR ENTREGA</button>
+              }
+             
+            </div>
+
+            }
+          </div>
+
+          <div class="tarea3">
+            <div class="fecha"><b>sábado, 20 de septiembre de 2025</b></div>
+            @for(tarea of tareaS; track $index){
+
+            <div class="info-tarea">
+              <div class="proceso">
+                <p class="hora">{{tarea.hora}}</p>
+                <i class="fa-solid fa-file-arrow-up"></i>
+              </div>
+              <div class="aprendizaje">
+                <h5>PROCESO DE APRENDIZAJE 1</h5>
+                <p class="info-curso">Vencimiento de Tarea - {{tarea.curso}}</p>
+              </div>
+              @if(tarea.tarea){
+                <button class="agregar">AGREGAR ENTREGA</button>
+              }
+              
+            </div>
+
+            }
+            
+          </div>
+        </div>
+
+      </div>
+
+      <div class="calendario">
+        <div class="title">
+          Calendario
+        <div class="blue calendar-border"></div>
+        </div>
+        
+        <div class="cursos">
+          <div class="custom-select">
+           <select class="select custom-select cal_courses_flt ml-1 mr-auto" 
+                 id="calendar-course-filter-1" 
+                 name="course">
+             <option>Todos los cursos</option>
+           <option value="39539">1066.202520</option>
+           <option value="39554">1451.202520</option>
+           <option value="38770">2256.202520</option>
+           <option value="40399">3072.202520</option>
+           <option value="38903">3559.202520</option>
+           <option value="38502">3586.202520</option>
+           <option value="40402">4761.202520</option>
+           <option value="42306">5218.202520</option>
+           </select>
+           <span class="flechas">
+             <i class="fa-solid fa-caret-up"></i>
+             <i class="fa-solid fa-caret-down"></i>
+           </span>
+         </div>
+
+         <button class="blue button">Nuevo Evento</button>
+        </div>
+
+        <div class="fecha-evento">
+          <div>◄ agosto</div>
+          <p>septiembre 2025</p>
+          <div>octubre ►</div>
+        </div>
+
+        <div class="tabla">
+          <table>
+            <thead>
+              <tr>
+                <th>Lun</th>
+                <th>Mar</th>
+                <th>Mié</th>
+                <th>Jue</th>
+                <th>Vie</th>
+                <th>Sáb</th>
+                <th>Dom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+              </tr>
+
+              <tr>
+                
+                <td><p class="blue">15</p></td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+              </tr>
+              <tr class="chiquito">
+                <td>29</td>
+                <td>30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+            </tbody>
+          </table>
+          <div class="descripcion">
+          <p>Calendario completo </p>
+          <li>Importar o exportar calendarios</li>
+        </div>
+        </div>
+        
+
+      </div>
+
+    </div>
+  </div>
+</main>
+<footer>
+  <div></div>
+</footer>
